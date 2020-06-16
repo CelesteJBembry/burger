@@ -1,0 +1,36 @@
+<h1>Burgers!</h1>
+
+<h2>New Burgers</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+    {{!   {{> partial ordered=true}} 
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Finished Burgers</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+{{!  {{> partial ordered=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+{{!--add a burger button--}}
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+
